@@ -8,10 +8,9 @@ const LoginForm = (props) => {
   function login(e) {
     e.preventDefault();
     setUser({username: username, address: address})
-    console.log(theUser);
   }
 
-  const { handleLogin } = props
+  const {} = props
   return (
     <div className="login-form">
       <form onSubmit={login}>
@@ -19,6 +18,8 @@ const LoginForm = (props) => {
         <input onChange={({target}) => setAddress(target.value)} type="text" name="address" value={address}/>
         <button onClick={login} type="submit">Login</button>
       </form>
+      {theUser && <h2>current username: {theUser.username}</h2>}
+      {theUser && <h2>current address: {theUser.address}</h2>}
     </div>
   )
 }

@@ -30,9 +30,10 @@ function App() {
           count={count}/>
         <LoginForm
           currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
           handleLogin={handleLogin}/>
         <h2>Username:{currentUser.name}</h2>
-        <h2>Address:</h2>
+        <h2>Address: {currentUser.name}</h2>
       </header>
     </div>
   );
